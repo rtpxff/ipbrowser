@@ -35,16 +35,15 @@ public:
     char check(uint ip);
 
 private:
+    uint get_limit(uint base, char mask);
+
+private:
     typedef std::map<uint, uint> t_mu;
     typedef std::map<uint, t_mu > t_map_pref;
     t_map_pref m_map_pref;
-
-    typedef std::map<uint, std::vector<uint>> t_map_pref2;
-    t_map_pref2 m_map_pref_tmp;
-
-    typedef std::map<uint, uint> t_map_pref_tmp2;
-    t_map_pref_tmp2 m_map_pref_tmp2;
-
     typedef std::vector<uint> t_vec_tmp;
+    typedef std::map<uint, char> t_map_tmp;
 
+    typedef std::map<uint, t_map_tmp > t_map_bounders;
+    t_map_bounders m_map_bounders;
 };

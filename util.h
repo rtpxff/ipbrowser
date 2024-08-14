@@ -22,6 +22,7 @@ public:
 public:
     static void converter_ip(uint base, uchar ip[4]);
     static uint converter_ip(uchar ip[4]);
+    
 
     static void converter_ip(uchar ip[4], std::string& binary_str, std::string& ulong_str);
 
